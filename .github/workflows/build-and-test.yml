@@ -27,3 +27,13 @@ jobs:
       run: npm run server & npm start & 
     - name: Test the app
       run: npm test
+  deploy:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: srv-d13k6oali9vc738lnimg
+          api-key: rnd_ILCQKlQBErumTXm21PRb0AGUnWYy
+          wait-for-success: true
