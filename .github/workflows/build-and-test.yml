@@ -23,7 +23,7 @@ jobs:
       run: npm i
     - name: Intsall playwright global
       run: npx playwright install
-    - name: Run the client
-      run: npm start 
+    - name: Run the client and server
+      run: npm run server & npm start & 
     - name: Test the app
       run: npm test
