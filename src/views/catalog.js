@@ -10,7 +10,7 @@ const catalogTemplate = (books) => html `<section id="dashboard-page" class="das
     ${books.length == 0 ? html`<p class="no-books">No books in database!</p>` : html` <ul class="other-books-list">
         ${books.map(bookTemplate)}</ul>`}
 
-</section>`;
+</section>`
 
 
 const bookTemplate = (book) => html`
